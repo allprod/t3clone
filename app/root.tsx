@@ -1,0 +1,40 @@
+import {
+    Links,
+    LiveReload,
+    Meta,
+    Outlet,
+    Scripts,
+    ScrollRestoration,
+} from "@remix-run/react";
+import { HeroUIProvider } from "@heroui/react";
+
+import type { LinksFunction } from "@remix-run/node";
+import stylesheet from "~/tailwind.css?url";
+
+export const links: LinksFunction = () => [
+    { rel: "stylesheet", href: stylesheet },
+];
+
+export default function App() {
+    return (
+        <html lang="en">
+            <head>
+                <link
+                    rel="icon"
+                    href="data:image/x-icon;base64,AA"
+                />
+                <Meta />
+                <Links />
+            </head>
+            <body>
+                <HeroUIProvider>
+                    <h1 className="text-3xl font-bold underline">Hello world!</h1>
+                    <Outlet />
+                    <ScrollRestoration/>
+                    <Scripts />
+                    <LiveReload/>
+                </HeroUIProvider>
+            </body>
+        </html>
+    );
+}

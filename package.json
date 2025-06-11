@@ -1,0 +1,38 @@
+{
+  "name": "t3clone",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Clone of the T3 AI chat app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "inspect": "node --inspect server.js",
+    "build": "npx remix vite:build",
+    "serve": "node server.js",
+    "dev": "node ./server.js",
+    "start": "cross-env NODE_ENV=production node ./server.js"
+  },
+  "keywords": [],
+  "author": "allprod",
+  "license": "ISC",
+  "dependencies": {
+    "@heroui/react": "^2.7.10",
+    "@remix-run/express": "^2.16.8",
+    "@remix-run/node": "^2.16.8",
+    "@remix-run/react": "^2.16.8",
+    "@remix-run/serve": "^2.16.8",
+    "cross-env": "^7.0.3",
+    "express": "^4.21.2",
+    "framer-motion": "^12.16.0",
+    "isbot": "^4.4.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^2.16.8",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.4",
+    "tailwindcss": "^3.4.17",
+    "vite": "^6.3.5"
+  }
+}
